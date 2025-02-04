@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Registration Form -->
+        <div id="register-form" class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/register.png" alt="icon" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2>Register</h2>
+                    <form id="register">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3 password-input-container">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                            <i class="fas fa-eye-slash password-toggle" id="toggle-password"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                    <p class="mt-3">Already have an account? <a href="#" id="show-login">Login here</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="mb-5" style="display: none;">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/login.png" alt="icon" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2>Login</h2>
+                    <form id="login">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3 password-input-container">
+                            <label for="login-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                            <i class="fas fa-eye-slash password-toggle" id="toggle-login-password"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p class="mt-3">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profile" style="display: none;">
+            <div class="row">
+                <img src="images/profile.png" alt="profile" class="img-fluid">
+            </div>
+            <h2>Welcome, <span id="profile-name"></span>!</h2>
+            <p>Email: <span id="profile-email"></span></p>
+            <button id="logout" class="btn btn-danger">Logout</button>
+        </div>
+
+        <!-- Error Messages -->
+        <div id="error-message" class="alert alert-danger mt-3" style="display: none;"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
