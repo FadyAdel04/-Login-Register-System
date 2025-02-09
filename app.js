@@ -1,13 +1,11 @@
 // DOM Elements
 const registerForm = document.getElementById('register-form');
 const loginForm = document.getElementById('login-form');
-const forgotPasswordForm = document.getElementById('forgot-password-form');
 const profileSection = document.getElementById('profile');
 const errorMessage = document.getElementById('error-message');
 
 const showLoginLink = document.getElementById('show-login');
 const showRegisterLink = document.getElementById('show-register');
-const showLoginFromForgotLink = document.getElementById('show-login-from-forgot');
 
 const registerButton = document.getElementById('register');
 const loginButton = document.getElementById('login');
